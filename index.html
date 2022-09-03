@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Order summary card</title>
+    <!-- <link rel="stylesheet" href="/reciept summary/css/style.css">
+    <link rel="stylesheet" href="/reciept summary/css/response.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(225, 100%, 94%);
+    background-image: url(/images/pattern-background-desktop.svg);
+    /* height: 1440px; */
+    width: 1440px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh 35vw;
+    width: 33vw;
+    height: 74vh;
+}
+
+main {
+    background-color: white;
+    width: 455px;
+    height: 79vh;
+    border-radius: 3vh 3vh 3vh 3vh;
+    margin-top: 40px;
+}
+
+.img {
+    justify-content: center;
+    display: flex;
+    align-content: center
+}
+
+.img img {
+    width: 455px;
+    border-radius: 3vh 3vh 0 0;
+}
+
+.heading {
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: bolder;
+    position: relative;
+    top: 25px;
+}
+
+h1 {
+    margin: 12px 0;
+    text-align: center;
+    font-weight: 900;
+}
+
+
+.item {
+    display: flex;
+    width: 34vw;
+    height: 60px;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    top: 30px;
+    right: 98px;
+}
+
+
+.sub-item {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    width: 35vh;
+    color: hsl(224, 23%, 55%);
+}
+
+.item2 {
+    display: flex;
+    background-color: hsl(225, 100%, 98%);
+    margin: 20px auto;
+    position: relative;
+    top: 45px;
+    right: 0px;
+    width: 44vh;
+    height: 9vh;
+    border-radius: 15px;
+}
+
+.sub-item1 {
+    position: relative;
+    top: 13px;
+    left: 18px;
+}
+
+.sub-item2 {
+    position: relative;
+    left: 40px;
+    top: 15px;
+}
+
+.sub-item2 h3 {
+    font-size: 18px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+}
+
+.sub-item3 {
+    position: relative;
+    top: 40px;
+    right: 55px;
+    height: 25px;
+}
+
+.sub-item3 p {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    color: hsl(224, 23%, 55%);
+    font-weight: 500;
+}
+
+.sub-item4 {
+    position: relative;
+    left: 78px;
+    top: 27px;
+    height: 30px;
+    /* width: 52px; */
+}
+
+.sub-item4 a {
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+    color: hsl(245, 75%, 52%);
+}
+
+.item3 {
+    position: relative;
+    top: 45px;
+    right: 54px;
+}
+
+.pay {
+    background-color: hsl(245, 75%, 52%);
+    height: 45px;
+    width: 17vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    left: 14vh;
+    top: 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px hsl(225, 100%, 94%);
+}
+
+.pay:hover {
+    cursor: pointer;
+}
+
+.pay-item {
+    text-align: center;
+    align-self: center;
+    color: hsl(225, 100%, 94%);
+    font-weight: 700;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+.pay-item a {
+    text-decoration: none;
+    color: hsl(225, 100%, 94%);
+}
+
+.cancel {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    top: 52px;
+    left: 58px;
+}
+
+.cancel-item {
+    align-self: center;
+    text-align: center;
+    font-size: 16px;
+    color: hsl(224, 23%, 55%);
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Red Hat Display', sans-serif
+}
+@media screen and (max-width: 811px) {
+  body {
+    background-color: hsl(225, 100%, 94%);
+    background-image: url(/images/pattern-background-desktop.svg);
+  }
+
+  .container {
+    margin: 10vh 121px;
+  }
+
+  main {
+    width: 353px;
+    height: 73vh;
+    border-radius: 2vh 2vh 2vh 2vh;
+  }
+
+  .img img {
+    width: 353px;
+    border-radius: 2vh 2vh 0 0;
+  }
+
+  .heading {
+    position: relative;
+    top: 18px;
+  }
+
+  .item {
+    width: 320px;
+    position: relative;
+    top: 25px;
+    left: 18px
+  }
+
+  .item2 {
+    position: relative;
+    top: 40px;
+    width: 320px;
+    height: 77px;
+  }
+
+  .sub-item1 {
+    position: relative;
+    top: 9px;
+    left: 14px;
+  }
+
+  .sub-item1 img {
+    width: 58px;
+  }
+
+  .sub-item2 {
+    position: relative;
+    left: 32px;
+    top: 9px;
+  }
+
+  .sub-item2 h3 {
+    font-size: 18px;
+  }
+
+  .sub-item3 {
+    position: relative;
+    top: 38px;
+    right: 60px;
+  }
+
+  .sub-item4 {
+    position: relative;
+    left: 0;
+    top: 25px;
+  }
+
+  .item3 {
+    position: relative;
+    top: 30px;
+    left: 10px;
+  }
+
+  .pay {
+    height: 54px;
+    width: 300px;
+    position: relative;
+    left: 18px;
+    top: 25px;
+  }
+
+  .cancel {
+    position: relative;
+    top: 46px;
+    left: -8px;
+  }
+
+}
+/* 
+@media screen and (max-width:412px) and(max-height:915px) {
+  .container {
+    margin: 10vh 138px;
+  }
+
+  main {
+    height: 65vh;
+  }
+
+  .item {
+    position: relative;
+    left: 14px;
+  }
+
+  .sub-item {
+    width: 60vw;
+  }
+
+  .pay {
+    width: 290px;
+    position: relative;
+    left: 23px;
+  }
+
+}
+
+@media screen and (max-width:412px) and (max-height:883px) {
+  main {
+    height: 68vh;
+  }
+
+  .container {
+    margin: 10vh 137px;
+  }
+
+}
+
+@media screen and (max-width:360px) and (max-height:760px) {
+  .container {
+    margin: 10vh 139px;
+  }
+
+  main {
+    height: 74vh;
+    width: 300px;
+  }
+
+  .img img {
+    width: 300px;
+  }
+
+  .heading {
+    position: relative;
+    top: 12px;
+  }
+
+  .item {
+    position: relative;
+    left: -11px;
+    top: 15px;
+  }
+
+  .sub-item {
+    width: 70vw;
+  }
+
+  .item2 {
+    position: relative;
+    top: 27px;
+    width: 265px;
+    height: 81px;
+  }
+
+  .sub-item1 {
+    position: relative;
+    top: 15px;
+    left: 10px;
+  }
+
+  .sub-item1 img {
+    width: 52px;
+  }
+
+  .sub-item2 {
+    position: relative;
+    left: 22px;
+    top: 19px;
+  }
+
+  .sub-item2 h3 {
+    width: 120px;
+  }
+
+  .sub-item3 {
+    position: relative;
+    top: 47px;
+    right: 90px;
+  }
+
+  .sub-item4 {
+    position: relative;
+    left: -61px;
+    top: 31px;
+  }
+
+  .item3 {
+    position: relative;
+    top: 10px;
+    left: 10px;
+  }
+
+  .pay {
+    width: 250px;
+    position: relative;
+    left: 16px;
+  }
+
+  .cancel {
+    position: relative;
+    top: 44px;
+    left: -8px;
+  }
+
+}
+
+@media screen and (max-width:360px) and (max-height:800px) {
+  .container {
+    margin: 10vh 122px;
+  }
+
+  main {
+    height: 71vh;
+    width: 310px;
+  }
+
+  .img img {
+    width: 310px;
+    border-radius: 2vh 2vh 0 0;
+  }
+
+  .heading {
+    position: relative;
+    top: 12px;
+  }
+
+  .item {
+    position: relative;
+    left: -7px;
+    top: 16px;
+  }
+
+  .sub-item {
+    width: 72vw;
+  }
+
+  .item2 {
+    position: relative;
+    top: 37px;
+    width: 270px;
+    height: 77px;
+  }
+
+  .sub-item1 {
+    position: relative;
+    top: 12px;
+    left: 12px;
+  }
+
+  .sub-item1 img {
+    width: 50px;
+  }
+
+  .sub-item2 {
+    position: relative;
+    left: 29px;
+    top: 13px;
+  }
+
+  .sub-item2 h3 {
+    font-size: 18px;
+    width: 101px;
+  }
+
+  .sub-item3 {
+    position: relative;
+    top: 42px;
+    right: 64px;
+  }
+
+  .sub-item4 {
+    position: relative;
+    left: -34px;
+    top: 26px;
+  }
+
+  .sub-item4 {
+    position: relative;
+    left: -34px;
+    top: 26px;
+  }
+
+  .item3 {
+    position: relative;
+    top: 28px;
+    left: 4px;
+  }
+
+  .pay {
+    width: 270px;
+    position: relative;
+    left: 17px;
+  }
+
+  .cancel {
+    position: relative;
+    top: 45px;
+    left: -4px;
+  }
+}
+
+@media screen and (max-width:384px) and(max-height:854px) {
+  .container {
+    margin: 10vh 128px;
+  }
+
+  main {
+    height: 69vh;
+  }
+
+}
+
+@media screen and (max-width:375px) and (max-height:812px) {
+  .container {
+    margin: 10vh 126px;
+  }
+
+  main {
+    height: 73vh;
+  }
+
+}
+
+@media screen and (max-width:414px) and (max-height:896px) {
+  .container {
+    margin: 10vh 135px;
+  }
+
+  main {
+    height: 66vh;
+  }
+
+}
+
+@media screen and (max-width:390px) and (max-height:844px) {
+  .container {
+    margin: 10vh 130px;
+  }
+
+  main {
+    height: 70vh;
+  }
+
+}
+
+@media screen and (max-width:375px) and (max-height:812px) {
+  .container {
+    margin: 10vh 126px;
+  }
+
+  main {
+    height: 73vh;
+  }
+
+}
+@media screen and (max-width:428px) and (max-height:926px) {
+  .container {
+    margin: 10vh 142px;
+  }
+  main {
+    height: 65vh;
+  }
+
+}
+@media screen and (max-width:375px) and (max-height:667px) {
+  .container {
+    margin: 10vh 125px;
+  }
+  main {
+    height: 89vh;
+  }
+
+}
+@media screen and (max-width:800px) and (max-height:1280px) {
+  .container {
+    margin: 13vh 280px;
+  }
+  main {
+    height: 46vh;
+  }
+
+} */
+    </style>
+
+<body>
+    <div class="container">
+        <main>
+            <div class="img">
+                <img src="/images/illustration-hero.svg" alt="">
+            </div>
+            <div class="heading">
+                <h1>Order Summary</h1>
+            </div>
+            <div class="item">
+                <p class="sub-item">You can now listen to millions of songs, audiobooks, and podcasts on any device
+                    anywhere youlike!
+                </p>
+            </div>
+            <div class="item2">
+                <div class="sub-item1">
+                    <img src="/reciept summary/icon-music.svg" alt="">
+                </div>
+                <div class="sub-item2">
+                    <h3>Annual Plan</h3>
+                </div>
+                <div class="sub-item3">
+                    <p>$59.99/year</p>
+                </div>
+                <div class="sub-item4"><a href="#">Change</a></div>
+            </div>
+            <div class="item3">
+                <div class="pay">
+                    <p class="pay-item"><a href="#">Proceed to Payment</a></p>
+                </div>
+                <div class="cancel">
+                    <a href="#" class="cancel-item">Cancel Order</a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+
+</body>
+
+</html>
